@@ -1,0 +1,19 @@
+package com.laioffer.onlineorder.controller;
+
+import com.laioffer.onlineorder.entity.Order;
+import com.laioffer.onlineorder.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import java.util.List;
+
+@Controller
+public class OrderController {
+    @Autowired
+    private OrderService orderService;
+
+    public List<Order> trackOrders() {
+        // TODO get current login user
+        return orderService.getOrders("");
+    }
+}
